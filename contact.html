@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Coco Hearts Bakery</title>
+    <script language="javascript" type="text/javascript">
+        // JS for form validation and confirmation
+        function validateAndSubmitContactForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Check if all fields are filled
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                return false;  // Prevent form submission
+            }
+
+            // Confirm before submission
+            var confirmSubmission = confirm("Do you want to submit the form?");
+            if (confirmSubmission) {
+                alert("Thank you! Your message has been sent.");
+                return true;  // Allow form submission
+            } else {
+                alert("Submission canceled.");
+                return false;  // Prevent form submission
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fffaf0;
+            color: #333;
+        }
+
+        header {
+            background-color: #f2c9c9;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: #d35400;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            color: #d35400;
+        }
+
+        /* Contact Page Styles */
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #d35400;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #d35400;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #f2c9c9;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        footer ul li a:hover {
+            color: #d35400;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #d35400;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/cocologo.png" alt="Coco Hearts Logo"> <!-- Add your bakery logo -->
+        <h1>Coco Hearts Bakery</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out using the form below.</p>
+    <div class="contact-form">
+        <form onsubmit="return validateAndSubmitContactForm()" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>Follow us on:</p>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+    </ul>
+    <p>123 Bakery Lane, Sweet City, Panampilly Nagar</p>
+    <p>Email: info@cocohearts.com | Phone: +91 1234567890</p>
+    <a href="index.html">Back to Home</a>
+    <p>&copy; 2024 Coco Hearts Bakery. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
