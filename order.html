@@ -7,7 +7,7 @@
     
     <script>
         function validateForm(event) {
-            event.preventDefault(); // Prevent form submission
+            event.preventDefault(); // Prevent form submissions
 
             let name = document.getElementById('name').value;
             let email = document.getElementById('email').value;
@@ -34,7 +34,7 @@
                 // Display custom feedback after confirmation
                 alert(`Thank you for your order, ${name}! Your ${quantity} ${item}(s) will be processed. Special instructions: ${feedback || 'None'}.`);
 
-                // Optionally, you can reset the form after successful submission
+                // also, you can reset the form after successful submission
                 document.getElementById('orderForm').reset();
             } else {
                 alert('Order submission canceled.');
